@@ -1,4 +1,4 @@
-package com.example.dddsample.application.cirle;
+package com.example.dddsample.application.cirle.command;
 
 import com.example.dddsample.domain.CircleName;
 import com.example.dddsample.domain.UserId;
