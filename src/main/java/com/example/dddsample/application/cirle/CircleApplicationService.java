@@ -51,7 +51,7 @@ public class CircleApplicationService {
 		if(circle == null) throw new CircleNotFoundException();
 		if(!circle.isNewMemberJoinable()) throw new CircleCapacityOverException();
 
-		Circle circleWithNewMembers = circle.join(joiner);
+		Circle circleWithNewMembers = circle.join(joiner.id());
 
 		this.circleRepository.save(circleWithNewMembers);
 	}

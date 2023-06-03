@@ -12,11 +12,11 @@ public class Circle {
 
 	private User owner;
 
-	private List<User> members;
+	private List<UserId> members;
 
 	private Integer MAX_NUMBER_OF_CIRCLE_MEMBER = 30;
 
-	public Circle(CircleId id, CircleName name, User owner, List<User> members) {
+	public Circle(CircleId id, CircleName name, User owner, List<UserId> members) {
 		if (id == null)
 			throw new NullPointerException();
 		if (name == null)
@@ -36,10 +36,10 @@ public class Circle {
 		return this.id().equals(other.id());
 	}
 
-	public Circle join(User newMember) {
+	public Circle join(UserId newMember) {
 		if (!isNewMemberJoinable()) throw new CircleCapacityOverException();
 
-		List<User> withNewMember = new ArrayList<>(this.members());
+		List<UserId> withNewMember = new ArrayList<>(this.members());
 		withNewMember.add(newMember);
 
 		return new Circle(this.id, this.name, this.owner, withNewMember);
@@ -57,7 +57,7 @@ public class Circle {
 		return this.owner;
 	}
 
-	public List<User> members() {
+	public List<UserId> members() {
 		return new ArrayList<>(this.members);
 	}
 
