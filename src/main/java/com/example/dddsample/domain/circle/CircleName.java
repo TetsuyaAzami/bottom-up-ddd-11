@@ -1,4 +1,4 @@
-package com.example.dddsample.domain;
+package com.example.dddsample.domain.circle;
 
 import org.springframework.util.StringUtils;
 

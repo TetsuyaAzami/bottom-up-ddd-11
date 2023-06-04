@@ -1,7 +1,8 @@
-package com.example.dddsample.domain;
+package com.example.dddsample.domain.circle;
 
 import java.util.ArrayList;
 import java.util.List;
+import com.example.dddsample.domain.user.UserId;
 import com.example.dddsample.exception.circle.CircleCapacityOverException;
 
 
@@ -10,13 +11,13 @@ public class Circle {
 
 	private CircleName name;
 
-	private User owner;
+	private UserId owner;
 
 	private List<UserId> members;
 
 	private Integer MAX_NUMBER_OF_CIRCLE_MEMBER = 30;
 
-	public Circle(CircleId id, CircleName name, User owner, List<UserId> members) {
+	public Circle(CircleId id, CircleName name, UserId owner, List<UserId> members) {
 		if (id == null)
 			throw new NullPointerException();
 		if (name == null)
@@ -53,7 +54,7 @@ public class Circle {
 		return this.name;
 	}
 
-	public User owner() {
+	public UserId owner() {
 		return this.owner;
 	}
 

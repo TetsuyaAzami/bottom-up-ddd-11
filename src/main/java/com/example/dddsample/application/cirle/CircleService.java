@@ -1,7 +1,7 @@
 package com.example.dddsample.application.cirle;
 
 import org.springframework.stereotype.Service;
-import com.example.dddsample.domain.Circle;
+import com.example.dddsample.domain.circle.Circle;
 
 @Service
 public class CircleService {

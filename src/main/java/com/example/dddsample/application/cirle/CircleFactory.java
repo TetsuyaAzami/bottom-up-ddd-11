@@ -1,8 +1,8 @@
 package com.example.dddsample.application.cirle;
 
-import com.example.dddsample.domain.Circle;
-import com.example.dddsample.domain.CircleName;
-import com.example.dddsample.domain.User;
+import com.example.dddsample.domain.circle.Circle;
+import com.example.dddsample.domain.circle.CircleName;
+import com.example.dddsample.domain.user.User;
 
 public interface CircleFactory {
 

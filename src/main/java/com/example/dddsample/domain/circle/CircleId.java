@@ -1,4 +1,4 @@
-package com.example.dddsample.domain;
+package com.example.dddsample.domain.circle;
 
 public record CircleId(String value) {
 
