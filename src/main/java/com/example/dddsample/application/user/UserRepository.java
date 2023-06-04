@@ -1,7 +1,7 @@
 package com.example.dddsample.application.user;
 
-import com.example.dddsample.domain.user.User;
-import com.example.dddsample.domain.user.UserId;
+import com.example.dddsample.domain.model.user.User;
+import com.example.dddsample.domain.model.user.UserId;
 
 public interface UserRepository {
 

@@ -3,10 +3,10 @@ package com.example.dddsample.domain;
 import static org.assertj.core.api.Assertions.assertThat;
 import java.util.List;
 import org.junit.jupiter.api.Test;
-import com.example.dddsample.domain.circle.Circle;
-import com.example.dddsample.domain.circle.CircleId;
-import com.example.dddsample.domain.circle.CircleName;
-import com.example.dddsample.domain.user.UserId;
+import com.example.dddsample.domain.model.circle.Circle;
+import com.example.dddsample.domain.model.circle.CircleId;
+import com.example.dddsample.domain.model.circle.CircleName;
+import com.example.dddsample.domain.model.user.UserId;
 
 public class CircleTest {
 

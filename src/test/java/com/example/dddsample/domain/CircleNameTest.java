@@ -2,7 +2,7 @@ package com.example.dddsample.domain;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Test;
-import com.example.dddsample.domain.circle.CircleName;
+import com.example.dddsample.domain.model.circle.CircleName;
 
 public class CircleNameTest {
 

@@ -1,8 +1,8 @@
 package com.example.dddsample.application.cirle;
 
-import com.example.dddsample.domain.circle.Circle;
-import com.example.dddsample.domain.circle.CircleId;
-import com.example.dddsample.domain.circle.CircleName;
+import com.example.dddsample.domain.model.circle.Circle;
+import com.example.dddsample.domain.model.circle.CircleId;
+import com.example.dddsample.domain.model.circle.CircleName;
 
 public interface CircleRepository {
 

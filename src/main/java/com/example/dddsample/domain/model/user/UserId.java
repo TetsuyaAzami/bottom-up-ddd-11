@@ -1,4 +1,4 @@
-package com.example.dddsample.domain.user;
+package com.example.dddsample.domain.model.user;
 
 public record UserId(Integer value) {
 

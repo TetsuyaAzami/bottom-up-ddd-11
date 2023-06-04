@@ -1,8 +1,8 @@
-package com.example.dddsample.domain.circle;
+package com.example.dddsample.domain.model.circle;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.example.dddsample.domain.user.UserId;
+import com.example.dddsample.domain.model.user.UserId;
 import com.example.dddsample.exception.circle.CircleCapacityOverException;
 
 

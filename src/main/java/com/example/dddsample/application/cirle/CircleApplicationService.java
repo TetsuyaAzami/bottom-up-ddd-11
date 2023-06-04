@@ -4,8 +4,9 @@ import org.springframework.transaction.annotation.Transactional;
 import com.example.dddsample.application.cirle.command.CircleCreateCommand;
 import com.example.dddsample.application.cirle.command.CircleJoinCommand;
 import com.example.dddsample.application.user.UserRepository;
-import com.example.dddsample.domain.circle.Circle;
-import com.example.dddsample.domain.user.User;
+import com.example.dddsample.domain.model.circle.Circle;
+import com.example.dddsample.domain.model.user.User;
+import com.example.dddsample.domain.service.CircleDupulicateCheckService;
 import com.example.dddsample.exception.circle.CannotRegisterCircleException;
 import com.example.dddsample.exception.circle.CircleCapacityOverException;
 import com.example.dddsample.exception.circle.CircleNotFoundException;
@@ -17,15 +18,15 @@ public class CircleApplicationService {
 
 	private CircleRepository circleRepository;
 
-	private CircleService circleService;
+	private CircleDupulicateCheckService circleDupulicateCheckService;
 
 	private UserRepository userRepository;
 
 	public CircleApplicationService(CircleFactory circleFactory, CircleRepository circleRepository,
-			CircleService circleService, UserRepository userRepository) {
+			CircleDupulicateCheckService circleService, UserRepository userRepository) {
 		this.circleFactory = circleFactory;
 		this.circleRepository = circleRepository;
-		this.circleService = circleService;
+		this.circleDupulicateCheckService = circleService;
 		this.userRepository = userRepository;
 	}
 
@@ -36,7 +37,7 @@ public class CircleApplicationService {
 			throw new UserNotFoundException();
 
 		Circle circle = this.circleFactory.create(circleCreateCommand.circleName(), owner);
-		if (this.circleService.exists(circle))
+		if (this.circleDupulicateCheckService.isDupulicated(circle))
 			throw new CannotRegisterCircleException();
 
 		this.circleRepository.save(circle);
