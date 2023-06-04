@@ -3,6 +3,10 @@ package com.example.dddsample.domain;
 import static org.assertj.core.api.Assertions.assertThat;
 import java.util.List;
 import org.junit.jupiter.api.Test;
+import com.example.dddsample.domain.circle.Circle;
+import com.example.dddsample.domain.circle.CircleId;
+import com.example.dddsample.domain.circle.CircleName;
+import com.example.dddsample.domain.user.UserId;
 
 public class CircleTest {
 
@@ -21,23 +25,23 @@ public class CircleTest {
 		assertThat(circle.hasSameIdentity(circle2)).isTrue();
 	}
 
-	private Circle getCircle(String id, String name, List<User> members) {
+	private Circle getCircle(String id, String name, List<UserId> members) {
 		CircleId circleId = new CircleId(id);
 		CircleName circleName = new CircleName(name);
 
 		return new Circle(circleId, circleName, members.get(0), members);
 	}
 
-	private List<User> getMembers() {
-		User user1 = new User(new UserId(1), new UserName("ユーザ名1"));
-		User user2 = new User(new UserId(2), new UserName("ユーザ名2"));
+	private List<UserId> getMembers() {
+		UserId user1 = new UserId(1);
+		UserId user2 = new UserId(2);
 
 		return List.of(user1, user2);
 	}
 
-	private List<User> getOtherMembers() {
-		User user3 = new User(new UserId(3), new UserName("ユーザ名3"));
-		User user4 = new User(new UserId(4), new UserName("ユーザ名4"));
+	private List<UserId> getOtherMembers() {
+		UserId user3 = new UserId(3);
+		UserId user4 = new UserId(4);
 
 		return List.of(user3, user4);
 	}
